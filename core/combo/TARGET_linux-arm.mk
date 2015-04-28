@@ -69,10 +69,8 @@ $(combo_2nd_arch_prefix)TARGET_NO_UNDEFINED_LDFLAGS := -Wl,--no-undefined
 
 $(combo_2nd_arch_prefix)TARGET_arm_CFLAGS :=    -O3 \
                         -fomit-frame-pointer \
-                        -fstrict-aliasing    \
-                        -funswitch-loops
-                        -fmodulo-sched 
-                        -fmodulo-sched-allow-regmoves 
+                        -fstrict-aliasing \
+                        -funswitch-loops \
                         -fno-tree-vectorize
 
 # Modules can choose to compile some source as thumb.
