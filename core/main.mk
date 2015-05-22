@@ -457,6 +457,10 @@ ifeq ($(filter-out $(INTERNAL_MODIFIER_TARGETS),$(MAKECMDGOALS)),)
 $(INTERNAL_MODIFIER_TARGETS): $(DEFAULT_GOAL)
 endif
 
+<<<<<<< HEAD
+#Add dirty mode:
+ifeq ($(MAKECMDGOALS),dirty)
+=======
 # These targets are going to delete stuff, don't bother including
 # the whole directory tree if that's all we're going to do
 ifeq ($(MAKECMDGOALS),clean)
@@ -493,6 +497,7 @@ ifeq ($(MAKECMDGOALS),dataclean)
 dont_bother := true
 endif
 ifeq ($(MAKECMDGOALS),installclean)
+>>>>>>> LP
 dont_bother := true
 endif
 
@@ -1169,3 +1174,13 @@ showcommands:
 .PHONY: nothing
 nothing:
 	@echo Successfully read the makefiles.
+
+
+# Clears out zip and build.prop
+.PHONY: dirty
+dirty:
+	@rm -rf $(OUT_DIR)/target/product/*/system/build.prop
+	@rm -rf $(OUT_DIR)/target/product/*/*.zip
+	@rm -rf $(OUT_DIR)/target/product/*/*.md5sum
+	@rm -rf $(OUT_DIR)/target/product/*/*.txt
+	@echo -e ${CL_GRN}"build.prop, changelog and zip files erased"${CL_RST}
