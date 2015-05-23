@@ -28,7 +28,6 @@ PRODUCT_PACKAGES := \
 	GestureBuilder \
 	librs_jni \
 	Mms \
-	Protips \
 	rild \
 	SdkSetup \
 	SmokeTest \
