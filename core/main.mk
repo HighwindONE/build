@@ -457,47 +457,8 @@ ifeq ($(filter-out $(INTERNAL_MODIFIER_TARGETS),$(MAKECMDGOALS)),)
 $(INTERNAL_MODIFIER_TARGETS): $(DEFAULT_GOAL)
 endif
 
-<<<<<<< HEAD
 #Add dirty mode:
 ifeq ($(MAKECMDGOALS),dirty)
-=======
-# These targets are going to delete stuff, don't bother including
-# the whole directory tree if that's all we're going to do
-ifeq ($(MAKECMDGOALS),clean)
-dont_bother := true
-endif
-ifeq ($(MAKECMDGOALS),clobber)
-dont_bother := true
-endif
-ifeq ($(MAKECMDGOALS),novo)
-dont_bother := true
-endif
-ifeq ($(MAKECMDGOALS),magic)
-dont_bother := true
-endif
-ifeq ($(MAKECMDGOALS),appclean)
-dont_bother := true
-endif
-ifeq ($(MAKECMDGOALS),imgclean)
-dont_bother := true
-endif
-ifeq ($(MAKECMDGOALS),kernelclean)
-dont_bother := true
-endif
-ifeq ($(MAKECMDGOALS),systemclean)
-dont_bother := true
-endif
-ifeq ($(MAKECMDGOALS),recoveryclean)
-dont_bother := true
-endif
-ifeq ($(MAKECMDGOALS),rootclean)
-dont_bother := true
-endif
-ifeq ($(MAKECMDGOALS),dataclean)
-dont_bother := true
-endif
-ifeq ($(MAKECMDGOALS),installclean)
->>>>>>> LP
 dont_bother := true
 endif
 
