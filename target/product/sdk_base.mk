@@ -27,9 +27,7 @@ PRODUCT_PACKAGES := \
 	Gallery \
 	GestureBuilder \
 	librs_jni \
-	LiveWallpapersPicker \
 	Mms \
-	Music \
 	Protips \
 	rild \
 	SdkSetup \
